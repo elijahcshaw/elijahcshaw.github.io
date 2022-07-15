@@ -3,18 +3,40 @@
 
 <head>
     <title>Elijah's HTML Webpage</title>
+    <!--CSS: external style sheet-->
+    <link rel="stylesheet" href="css/elijah.css">
+    <!--CSS: embedded style sheet-->
+    <style>
+        div {display: inline; margin-left: auto; margin-right: auto}
+        .titleArea {
+            font:300;
+            color: goldenrod;
+            text-align: center;
+            margin: 0;
+        }
+        .listItems {
+            display: inline-block;
+            padding-left: 40px;
+            padding-top: 8px;
+        }
+    </style>
 </head>
-<!-- I'm going to leave this comment here and not spread out in the code because this is really simple HTML, but I basically just added every required 
-    tag from the assignment and tried to make them at least somewhat decent looking on the page. I stayed away from doing any major CSS yet since I want 
-    to focus on that in the upcoming week, but there's some inline styles provided to make the page a little prettier-->
+<!--HTML UPDATE: Fixed Mark's suggestions, including use of figcaption and tbody instead of
+    the semantically incorrect tags there before. Also fixed img src so if the image moves 
+    the tag will still work. Reformatted some of the pre-existing code to be more vertical.-->
 <body>
-    <div style="text-align: center; margin: 0">
+    <div class="titleArea">
         <h1>Assignment #1: HTML Page</h1>
         <h2>Elijah Shaw</h2>
     </div>
+    <!--CSS: in tag style-->
     <div style="text-align: left">
-        <h3>Sample Text</h3>
-            <p>This is a sample <strong>paragraph</strong>. A <strong>paragraph</strong> is made up of sentences. The HTML tag doesn't have that requirement. <em>This</em> sentence in particular contains a <span style="color:royalblue">styled span of text.</span></p>
+        <h3 >Sample Text</h3>
+            <p>This is a sample <strong>paragraph</strong>. 
+               A <strong>paragraph</strong> is made up of sentences. 
+               The HTML tag doesn't have that requirement. 
+               <em>This</em> sentence in particular contains a 
+               <span style="color:royalblue">styled span of text.</span></p>
         <h3>Sample Structures</h3>
             <table style="width: 300px; border: 1px solid black">
                 <caption>Table of Info</caption>
@@ -31,24 +53,27 @@
             </table>
             <ul>
                 <figcaption>Kanto Region Starter Pokemon</figcaption>
-                <div style="padding-left:20px">
-                    <li>Bulbasaur</li>
-                    <li>Charmander</li>
-                    <li>Squirtle</li>
+                <!--CSS: class style-->
+                <div class="listItems">
+                    <li class="grassType">Bulbasaur</li>
+                    <li class="fireType">Charmander</li>
+                    <li class="waterType">Squirtle</li>
                 </div>
             </ul>
             <ol>
-                <caption>Johto Region Starter Pokemon</caption>
-                <div style="padding-left:20px">
-                    <li>Chikorita</li>
-                    <li>Cyndaquil</li>
-                    <li>Totodile</li>
+                <figcaption>Johto Region Starter Pokemon</figcaption>
+                <!--CSS: class style-->
+                <div class="listItems">
+                    <li class="grassType">Chikorita</li>
+                    <li class="fireType">Cyndaquil</li>
+                    <li class="waterType">Totodile</li>
                 </div>
             </ol>
-        <h3>Sample Link</h3>
+        <h3 id="linkHeader">Sample Link:</h3>
             <a href="https://www.youtube.com/">The Real Home Page of the Internet</a>
         <h3>Sample Image</h3>
-            <img src="images/luna.JPG" alt="A sunny photograph of my dog Luna" title="Luna" width="640" height="360">
+            <img style="width: 640px; height: 360px;" src="images/luna.JPG" 
+             alt="A sunny photograph of my dog Luna" title="Luna" >
     </div>
     
 </body>
