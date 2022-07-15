@@ -31,3 +31,11 @@ li {
 a:hover {
     color: coral;
 }
+
+th {
+    width: 50%;
+}
+
+td {
+    width: 50%;
+}
