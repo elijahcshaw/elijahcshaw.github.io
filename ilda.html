@@ -7,13 +7,29 @@
         h1 {font-weight: bolder; font-family: "Noto Sans Gothic",serif} /*think I have to download fonts*/
         h2 {font-weight: bold; font-family: "Noto Sans Gothic", serif}
         p {font-weight: normal; font-family: "Times New Roman",serif}
-        div {text-align: left; margin-left: 100px}
+        div {display: block; margin-left: auto; margin-right: auto}
+        .ToDo-List-Container {
+            display: table; /*This separates div by div*/
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .images{
+            margin-left: 15%;
+        }
+        .reward{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .Personal-ToDo{
+            float: left;
+        }
     </style>
 </head>
 
 <body>
     <div style="text-align: center; margin: 0">
-        <h1>A simple HTML page</h1>
+        <h1 style ="color: coral">My Planner</h1>
         <h2>Ilda Kim</h2>
     </div>
 
@@ -38,7 +54,7 @@
             </ul>
         </div>
 
-        <div class="School-ToDo" style="float: left"><!--Mark's comment 7/9: I guess you're giving these elements class names to be ready for the CSS assignment? Right now, they don't do anything since you didn't specify .classname in the style block up top.-->
+        <div class="School-ToDo" style="float: left; margin-right: 20px"><!--Mark's comment 7/9: I guess you're giving these elements class names to be ready for the CSS assignment? Right now, they don't do anything since you didn't specify .classname in the style block up top.-->
             <h3>School ToDo List</h3>
             <ol>
                 <li>Finish Lecture 4: <strong>AVL Tree</strong> Take Notes</li>
@@ -48,14 +64,14 @@
             </ol>
         </div>
 
-        <div class="reward" style="float: left; margin-bottom: 150px">
+        <div class="reward" style="float: left;">
             <h3><em>REWARD</em></h3>
             <a href = "https://www.youtube.com">Watch YouTube videos in bed</a>
         </div>
     </div>
 
-    <div style="float: bottom; width: 55%" >
-        <div class="images">
+    <div class="images" style="float: bottom";>
+        <div>
             <img src="/images/ups.jpg" alt="ups" title="task 1 of personal todo" width="300" height="200">
         </div>
 
@@ -64,7 +80,7 @@
             <img src="/images/avl.png" alt="ups" title="task 1 of personal todo" width="300" height="200">
         </div>
 
-        <div style="display: inline-block;">
+        <div style="display:block;">
             <table>
                 <tr>
                     <th>Teammates</th>
