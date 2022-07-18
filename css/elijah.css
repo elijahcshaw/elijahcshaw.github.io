@@ -16,7 +16,7 @@ li {
     color: green;
 }
 .fireType {
-    color: red
+    color: red /*Mark's comment 7/17: don't forget the semicolon*/
 }
 .waterType {
     color: blue;
